@@ -9,3 +9,5 @@ sudo apt-get install -y curl unzip mina-testnet-postake-medium-curves=0.2.2-b7ef
 mkdir ~/keys
 wget -O ~/peers.txt https://raw.githubusercontent.com/MinaProtocol/coda-automation/bug-bounty-net/terraform/testnets/testworld/peers.txt
 touch ~/.mina-env
+echo "CODA_PRIVKEY_PASS=\"password from email\" \
+EXTRA_FLAGS=\" -file-log-level Info -run-snark-worker -snark-worker-fee\" " > ~/.mina-env
