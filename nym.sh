@@ -2,7 +2,7 @@
 
 sudo apt update
 sudo apt install pkg-config build-essential openssl libssl-dev curl jq git -y
-1|curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source $HOME/.cargo/env
 git clone https://github.com/nymtech/nym.git
 cd nym
