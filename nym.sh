@@ -28,6 +28,6 @@ StartLimitBurst=10
 [Install]
 WantedBy=multi-user.target"
 
-echo FILE >> /etc/systemd/system/nym-mixnode.service
+echo $FILE >> /etc/systemd/system/nym-mixnode.service
 
 systemctl enable nym-mixnode.service
