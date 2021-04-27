@@ -27,7 +27,7 @@ StartLimitInterval=350
 StartLimitBurst=10
 
 [Install]
-WantedBy=multi-user.target"
+WantedBy=multi-user.target
 EOF
 
 systemctl enable nym-mixnode.service
