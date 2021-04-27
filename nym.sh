@@ -4,6 +4,7 @@ sudo apt update
 sudo apt install pkg-config build-essential openssl libssl-dev curl jq git -y
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source $HOME/.cargo/env
+rm -rf /etc/systemd/system/nym-mixnode.service
 git clone https://github.com/nymtech/nym.git
 cd nym
 git checkout tags/v0.10.0
