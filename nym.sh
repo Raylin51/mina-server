@@ -31,6 +31,4 @@ WantedBy=multi-user.target" \
 
 echo $FILE >> /etc/systemd/system/nym-mixnode.service
 
-cat /etc/systemd/system/nym-mixnode.service
-
 systemctl enable nym-mixnode.service
