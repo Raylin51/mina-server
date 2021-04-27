@@ -2,12 +2,13 @@
 
 sudo apt update
 sudo apt install pkg-config build-essential openssl libssl-dev curl jq git -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 git clone https://github.com/nymtech/nym.git
 cd nym
 git checkout tags/v0.10.0
 cargo build --release
 
-ID=openssl rand -base64 8
+ID="openssl rand -base64 8"
 cd target/release
 ./nym-mixnode init --id $(ID) --host $(curl ifconfig.me)
 echo "DefaultLimitNOFILE=65535" >> /etc/systemd/system.conf
